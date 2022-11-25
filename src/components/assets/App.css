@@ -1,0 +1,17 @@
+.container{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+        
+
+    background-image: url('./blob-scene-haikei-bright.png');
+    background-size: cover;
+
+    background-color: rgba(178,112,146,255)
+}

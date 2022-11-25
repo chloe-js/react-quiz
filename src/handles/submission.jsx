@@ -12,23 +12,24 @@ class GetResults extends React.Component {
         this.state = { arr: [1], x: 'one' }
     }
     render() {
-        const getNotes = async () => {
-            const notesSnapshot = await getDocs(collection(db, "results"));
-            const notesList = notesSnapshot.docs.map((doc) => doc.data());
+        const getQuestions = async () => {
+            const questionsSnapshot = await getDocs(collection(db, "questions"));
+            const questionsList = questionsSnapshot.docs.map((doc) => doc.data());
             this.setState({
-                arr: notesList
+                arr: questionsList
             })
-            return notesList;
+            console.log(questionsList)
+            return questionsList;
         };
-        // getNotes()
         return (
             <div>
-                <h1>Username</h1>
-                <h1>{this.state.arr.map((item, i) => (
+                <button onClick={getQuestions}>X</button>
+                <h1>Questions</h1>
+                {/* <h1>{this.state.arr.map((item, i) => (
                     <>
-                        <p key={i}>{item.username}</p>
+                        <p key={i}>{item.question}</p>
                     </>
-                ))}</h1>
+                ))}</h1> */}
             </div>
         )
     }

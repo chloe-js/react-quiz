@@ -1,3 +1,13 @@
+.box{ 
+    background: transparent;
+}
+
+.question, .answers, .score, .question_number {
+    font-family: 'Oxygen', sans-serif;
+    color: white
+
+}
+
 .question {
     text-align: center;
     margin: 2rem 0;
@@ -14,7 +24,7 @@
 .answer {
     padding: 10px;
     background-color: white;
-    color: white;
+    color: rgba(178,112,146,255) ;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -23,12 +33,14 @@
     text-align: center;
     letter-spacing: 2px;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
 
 }
 
 .answer:hover {
-    background-color: #8ec5fc;
+    background-color: rgba(178,112,146,255) ;
+    color: white;
+    border: 1px white solid;
 }
 
 .score, .question_number {
@@ -38,9 +50,21 @@
 }
 
 .score {
-    left: 1rem
+    left: 2rem
 }
 
 .question_number {
-    right: 1rem;
+    right: 2rem;
+}
+
+@media (max-width: 1024px){
+    .question {
+        font-size: 20px;
+    }
+    .answer {
+        padding: 1px;
+        height: 40px;
+        font-size: 85%
+    }
+
 }

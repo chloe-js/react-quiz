@@ -1,0 +1,108 @@
+.header,
+.primary_text,
+.start_btn
+.username_input::placeholder,
+.top_score {
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    color: rgba(178,112,146,255) ;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+
+.header {
+    margin: 2rem 0 5rem;
+    padding-bottom: 20px;
+    font-size: 80px;
+    /* margin : top right bottom left */
+    /* in this case: margin: top right/left bottom */
+
+}
+
+.primary_text{
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+input[type=text] { 
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    color: rgba(178,112,146,255) ;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.username_input, .start_btn{
+    /* outline: 0; */
+    /* An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out". */
+    /* the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline. */
+    width: 60%;
+    padding: 1rem;
+    border-radius: 25px;
+    display: block;
+    border: 0;
+}
+
+.start_btn{
+    width: 50%
+}
+
+.username_input{
+    color: rgba(178,112,146,255);
+    background-color: white;
+    margin: 2px auto 5rem;
+    text-align: center;
+
+}
+
+.start_btn{
+    border: 0;
+    cursor: pointer;
+    background-color: white;
+    color: rgba(178,112,146,255);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 2rem auto;
+    transition: background-color 0.2s
+}
+
+.start_btn:hover{
+
+    color:white;
+    background-color: rgba(178,112,146,255);
+    font-size: 1rem;
+    border: 1px white solid;
+
+
+}
+
+.top_score {
+    font-weight: bold;
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    /* top score is a position absolute within a position relative (i.e card) which allows it to stay in the bottom corner and to use properties like left, right etc  */
+
+}
+
+@media (max-width: 1024px){
+    .header {
+        font-size: 40px;
+    }
+    .username_input{
+        margin: 2px auto 10px;
+        
+    
+    }
+}

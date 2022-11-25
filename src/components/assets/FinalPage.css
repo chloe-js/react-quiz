@@ -1,0 +1,53 @@
+.heading {
+    margin: 2rem 0 5rem;
+}
+
+.primary_text_final, .heading, .final_score, .play_again_btn {
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    color: white
+}
+
+.play_again_btn {
+    width: 30%;
+    display: block;
+    margin: 10% auto 0;
+    border: 0;
+    border-radius: 25px;
+    outline: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 1rem;
+    letter-spacing: 2px;
+    background-color: white;
+    color: rgba(178,112,146,255);
+    transition: background-color 0.2s
+
+}
+
+.play_again_btn:hover{
+    background-color: rgba(178,112,146,255);
+    color: white;
+    border: 1px white solid;
+}
+
+.primary_text_final{
+    font-size: 30px;
+    margin-top: 10%
+}
+
+.final_score{
+    font-size: 60px;
+}
+
+@media (max-width: 1024px){
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .play_again_btn{
+        width: 70%;
+    }
+}
