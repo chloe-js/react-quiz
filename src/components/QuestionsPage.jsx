@@ -4,9 +4,8 @@ import Question from "./Question";
 // import * as firestore from 'firebase/firestore';
 import { db } from '../firebase_setup/firebase'
 import { collection, getDocs, getDoc, setDoc } from "firebase/firestore";
-
-const QuestionsPage = async ({
-
+import {getQuestions} from "../questions"
+const QuestionsPage = ({
   score,
   setScore,
   setShowQuestionsPage,
@@ -14,25 +13,25 @@ const QuestionsPage = async ({
 }) => {
 
   const [questionIndex, setQuestionIndex] = useState(0);
-  const [questions, setQuestions] = useState([])
-  useEffect(async () => {
+  const [questions, setQuestions] = useState(getQuestions())
+  useEffect(() => {
     const getQuestions = async () => {
       const questionsSnapshot = await getDocs(collection(db, "questions"));
       const questionsList = questionsSnapshot.docs.map((doc) => doc.data())
       return questionsList;
     };
     if (questions.length === 0) {
-      setQuestions(await getQuestions())
+      setQuestions( getQuestions())
       console.log(questions)
     }
-  })
+  }, [questions])
 
 
   return (
     <>
       <Question
         questionIndex={questionIndex}
-        questions={[]}
+        questions={questions}
         setQuestionIndex={setQuestionIndex}
         setShowQuestionsPage={setShowQuestionsPage}
         setShowFinalPage={setShowFinalPage}
